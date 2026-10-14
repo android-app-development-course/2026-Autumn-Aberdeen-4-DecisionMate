@@ -1,72 +1,76 @@
-# 选择困难症终结者 / DecisionMate
+# DecisionMate
 
-> 少一点纠结，多一点行动。
+> Less indecision. More action.
 
-《移动智能应用开发》课程项目 | 2026 年秋季 | Aberdeen 第 4 组 | Android 应用
+Mobile Smart Application Development Course | Autumn 2026 | Aberdeen Group 4 | Android Application
 
-## 项目简介
+## Project Overview
 
-DecisionMate（选择困难症终结者）是一款面向日常生活的 Android 智能决策应用，旨在帮助用户在多个选项之间更轻松地做出选择。无论是“今天吃什么”“周末去哪里”，还是“买哪双鞋”“看哪部电影”，用户都可以表达自己的偏好和限制，获得更符合当前需求的推荐。
+DecisionMate is a planned Android application that helps people make everyday choices with less hesitation. Whether the question is "What should I eat today?", "Where should we go this weekend?", "Which shoes should I buy?", or "Which film should I watch?", users can express their preferences and constraints to receive suggestions that fit their needs.
 
-项目计划结合 AI 偏好学习、多人协同决策和反向排除三种机制，让推荐既考虑个人喜好，也能够兼顾朋友之间的共同意愿。我们希望将反复比较、迟迟无法决定的过程，变成一次轻松、有趣且有依据的选择体验。
+The project combines three proposed mechanisms: AI preference learning, group decision-making, and exclusion-based selection. Recommendations are intended to reflect both individual interests and shared preferences, turning repeated comparisons into a more enjoyable and informed decision process.
 
-## 项目背景
+## Background and Motivation
 
-日常生活中，许多决定虽然不大，却会让人花费不少时间：选项太多时难以比较，朋友意见不同时难以达成共识，有时也只能说出“我不想要什么”，却说不清“我想要什么”。
+Small decisions can take more time than expected. Too many options make comparison difficult, friends may struggle to agree, and people can sometimes describe what they do not want more easily than what they do want.
 
-DecisionMate 希望回应这三类需求：理解个人偏好、协调群体意见，以及将排除条件转化为可选择的范围。应用提供建议与推荐理由，最终决定仍由用户自己确认。
+DecisionMate aims to address these situations by learning personal preferences, bringing group opinions together, and narrowing the available choices through exclusion criteria. It will offer suggestions and explanations while leaving the final decision to the user.
 
-## 典型使用场景
+## Typical Use Cases
 
-| 场景 | 常见问题 | 预期帮助 |
+| Scenario | Common Question | Intended Support |
 | --- | --- | --- |
-| 日常饮食 | 今天吃什么？不想吃辣怎么办？ | 根据口味偏好与排除条件推荐候选项 |
-| 周末出游 | 周末去哪里？几个人意见不同怎么办？ | 汇总参与者的意愿，寻找共同可接受的活动 |
-| 购物比较 | 两双鞋都喜欢，应该选哪双？ | 结合用户提供的预算、风格和偏好辅助选择 |
-| 休闲娱乐 | 看哪部电影？和朋友玩什么？ | 根据兴趣与共同意愿推荐娱乐选项 |
+| Everyday meals | What should I eat? What if I do not want spicy food? | Suggest options based on taste preferences and exclusions |
+| Weekend activities | Where should we go when everyone has a different idea? | Combine participants' preferences to find mutually acceptable activities |
+| Shopping comparisons | I like both pairs of shoes. Which should I choose? | Consider the user's stated budget, style, and preferences |
+| Leisure and entertainment | Which film should we watch? What should we play together? | Suggest options based on interests and group preferences |
 
-## 核心功能设想
+## Proposed Core Features
 
-### 1. AI 偏好学习：让每一次反馈帮助下一次选择
+### 1. AI Preference Learning: Learn from Each Experience
 
-用户可以在收到推荐并体验结果后，给出“喜欢”“一般”“不喜欢”等评价，也可以用自然语言记录感受，例如“今天推荐的火锅很好吃，但下次想试试清淡一点的”。
+After trying a recommendation, users can rate the experience as "Liked it", "It was okay", or "Disliked it". They can also leave feedback in their own words, such as "The hot pot was great, but I would like something lighter next time."
 
-应用计划积累这些反馈，建立可更新的偏好记录，并结合本次选择的条件提供个性化建议。设计上也希望展示简短的推荐理由，让用户理解结果为何适合自己。
+The application is intended to build an evolving preference profile from these responses and combine it with the conditions of the current decision. Short explanations would help users understand why a particular option was suggested.
 
-**示例：** 用户多次喜欢清淡的餐食后，下一次饮食推荐可以优先考虑相关选项；如果今天明确表示想吃火锅，则以本次表达的需求为重要依据。
+**Example:** If a user repeatedly enjoys lighter meals, future food suggestions could give those options more weight. An explicit request for hot pot today would still be considered alongside that history.
 
-### 2. 多人决策：寻找大家都能接受的选择
+### 2. Group Decision-Making: Find a Choice Everyone Can Accept
 
-发起人创建一次决策邀请，朋友在各自手机上参与，提交候选项或表达“想选”“可以接受”“不接受”等意愿。系统计划综合投票与接受程度，推荐适合本次聚会的共同选择。
+An organiser starts a decision session and invites friends to participate on their own phones. Participants can submit options and express whether they "Prefer it", "Can accept it", or "Cannot accept it". The system is intended to combine votes and acceptance levels to suggest a suitable group choice.
 
-设计上优先考虑参与者都能接受的选项，再比较大家的喜好；如果没有共同可接受的结果，提示补充候选项或重新协商条件。平票时展示并列选项，让成员共同确认。
+The proposed approach prioritises options that every participant can accept, then compares preferences within that set. If no shared option exists, the application would ask the group to add alternatives or reconsider its conditions. Tied options would be shown for the group to confirm.
 
-**示例：** 四位朋友决定晚餐，一人不吃辣、一人想吃火锅、两人倾向烤肉，系统根据实际候选和每个人的接受程度寻找共同选择，而不保证某一道菜必然满足所有人。
+**Example:** Four friends are choosing dinner. One avoids spicy food, one wants hot pot, and two prefer barbecue. The application would look for a shared choice using the actual options and each person's acceptance levels, without assuming that a single dish will always satisfy everyone.
 
-### 3. 反向选择：从“不想要什么”开始
+### 3. Exclusion-Based Selection: Start with What You Do Not Want
 
-用户不必先想好理想答案，可以直接表达排除条件，例如“不想吃面、不想吃饭、不想吃辣”。应用计划据此筛选候选项，再在剩余范围内进行推荐。
+Users do not need to know their ideal answer in advance. They can state exclusions such as "No noodles, no rice dishes, and nothing spicy." The application is intended to filter the available options and recommend from those that remain.
 
-对于自然语言中的模糊表达，设计上允许用户检查和确认系统理解的条件。若所有候选项都被排除，应用应明确提示，由用户决定添加选项或调整条件。
+For ambiguous natural-language requests, users would be able to review and confirm the conditions the system understood. If every option is excluded, the application would explain the situation and let the user add options or adjust the conditions.
 
-**示例：** 在饮食候选中排除面食、米饭类和辛辣选项后，从其余符合条件的候选中推荐，而不是重新推荐已经排除的食物。
+**Example:** After excluding noodle dishes, rice dishes, and spicy food, the application would recommend from the remaining eligible options instead of suggesting an excluded meal again.
 
-## 项目特色
+## Project Highlights
 
-- **反馈驱动的个性化：** 将用户评价用于后续推荐，探索随使用逐步调整的偏好模型。
-- **兼顾群体接受程度：** 多人模式关注共同可接受的结果，也考虑每位参与者的意愿。
-- **更自然的需求表达：** 同时支持“我喜欢什么”和“我不想要什么”，降低表达需求的门槛。
-- **有解释、可调整的推荐：** 计划提供推荐理由，并允许用户修改条件与确认结果。
+- **Feedback-based personalisation:** Use experience ratings to explore a preference model that adapts over time.
+- **Shared acceptance in group decisions:** Consider each participant's views and seek a mutually acceptable result.
+- **Natural ways to express needs:** Support both positive preferences and exclusions.
+- **Explainable, adjustable suggestions:** Provide a reason for the recommendation and let users revise conditions before confirming a choice.
 
-## 预期使用流程
+## Intended User Journey
 
-1. 选择本次决策场景，例如饮食、出游、购物或娱乐。
-2. 添加候选项，说明偏好或排除条件；多人模式下邀请朋友参与。
-3. 获取推荐结果，查看理由，并根据需要调整条件。
-4. 确认自己的选择，在体验后留下反馈，为后续推荐提供参考。
+1. Choose a decision category, such as meals, outings, shopping, or entertainment.
+2. Add options and state preferences or exclusions; invite friends if using group mode.
+3. Review a recommendation and its explanation, then adjust the conditions if needed.
+4. Confirm a choice and leave feedback after the experience to inform future suggestions.
 
-## 项目目标与当前状态
+## Project Goals and Current Status
 
-本项目希望探索 AI 与移动应用结合的日常决策体验，减少在小决定上反复纠结的时间，并让多人协商更加清晰。应用定位于生活中的轻量选择，推荐结果作为用户做决定时的参考。
+This course project aims to explore how AI and mobile applications can support everyday decisions, reduce time spent on small choices, and make group discussions clearer. DecisionMate is intended for everyday, low-stakes choices, with recommendations serving as a reference for the user's own decision.
 
-**当前已完成仓库初始化与项目介绍整理，尚未开始软件开发。** 本文中的功能、交互流程和推荐机制均为设计设想，不代表已经实现；具体技术方案与功能范围将在后续课程开发阶段确认。
+**Repository initialisation and project documentation are complete. Software development has not started.** All features, interactions, and recommendation mechanisms described here are proposals, not implemented functionality. The technical approach and final scope will be confirmed during the development phase of the course.
+
+## Project Language
+
+English is the required language for all project documentation, code comments, application interface text, and future project deliverables.
